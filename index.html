@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
   <title>Frontend Mentor | Results summary component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -26,7 +25,14 @@
           people who have taken these tests</p>
       </div>
       <div class="summary">
-
+        <h4>Summary</h4>
+        <script>
+            fetch("data.json")
+              .then(Response => Response.json)
+              .then(data => {
+                document.querySelector(".summary").innerHTML = data.sentence
+              })
+        </script>
       </div>
     </div>
   

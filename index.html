@@ -17,23 +17,43 @@
   <div class="container">
     <div class="content">
       <div class="result">
-        <h6>Your Results</h6>
-        <h1>76</h1>
-        <p>of 100</p>
-        <h2>Great</h2>
-        <p>You scored higher than 65% of the 
-          people who have taken these tests</p>
+        <h3>Your Result</h3>
+        <div class="circle">
+          <h1>76</h1>
+          <p>of 100</p>
+        </div>
+        <div class="description">
+          <h2>Great</h2>
+          <h6>You scored higher than 65% of the 
+            people who have taken these tests.</h6>
+        </div>
       </div>
       <div class="summary">
-        <h4>Summary</h4>
-        <script>
-            fetch("data.json")
-              .then(Response => Response.json)
-              .then(data => {
-                document.querySelector(".summary").innerHTML = data.sentence
-              })
-        </script>
-      </div>
+        <div class="text-sum">
+          <h3>Summary</h3>
+            <div class="catagory" id="reaction">
+              <img src="/assets/images/icon-reaction.svg">
+              <p id="reaction-text">Reaction</p>
+              <p>80  <span class="grayify"> / 100</span></p>
+            </div>
+            <div class="catagory" id="memory">
+              <img src="/assets/images/icon-memory.svg">
+              <p id="memory-text">Memory</p>
+              <p>92  <span class="grayify"> / 100</span></p>
+            </div>
+            <div class="catagory" id="verbal">
+              <img src="/assets/images/icon-verbal.svg">
+              <p id="verbal-text">Verbal</p>
+              <p>61<span class="grayify"> / 100</span></p>
+            </div>
+            <div class="catagory" id="visual">
+              <img src="/assets/images/icon-visual.svg">
+              <p id="visual-text">Visual</p>
+              <p>72 <span class="grayify"> / 100</span></p>
+            </div>
+          </div>
+            <input type="button" value="Continue" style="border: none;">
+        </div>
     </div>
   
 
